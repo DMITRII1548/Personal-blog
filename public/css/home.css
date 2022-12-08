@@ -118,6 +118,10 @@ body {
     background: #639886;
 }
 
+.article:hover {
+    opacity: 0.7;
+}
+
 .article-img {
     width: 298px; 
 }
