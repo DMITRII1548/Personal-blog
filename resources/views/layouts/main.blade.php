@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="/css/home.css">
     <link rel="stylesheet" href="/css/media/home.css">
     <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/pagination.css">
     <title>Personal-blog</title>
 </head>
 <body>
@@ -14,7 +15,7 @@
         <div class="container">
             <div class="header-menu">
                 <div class="logo">
-                    <a href="#!" class="logo-link">Blog</a>
+                    <a href="{{ route('nav.home') }}" class="logo-link">Blog</a>
                 </div>
                 <nav class="header-nav">
                     <ul class="header-nav-list">
