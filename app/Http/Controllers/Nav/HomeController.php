@@ -11,7 +11,7 @@ class HomeController extends Controller
     
     public function __invoke()
     {
-        $articles = Article::all();
+        $articles = Article::paginate(12)->withQueryString();
 
         return view('blog.home', compact('articles'));
     }
