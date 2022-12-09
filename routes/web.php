@@ -14,6 +14,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 //navigation
-Route::get('/', function () {
-    return view('blog.home');
+Route::group(['namespace' => 'App\Http\Controllers\Nav'], function () {
+    Route::get('/', 'HomeController')->name('nav.home');
+    Route::get('/news', 'HomeController')->name('nav.news');
+    Route::get('/about', 'HomeController')->name('nav.about');
+    Route::get('/getintouch', 'HomeController')->name('nav.getintouch');
 });
+
