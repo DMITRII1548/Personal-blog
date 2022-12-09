@@ -38,4 +38,10 @@
             </div>
         </div>
     </main>
+
+    <section class="paginate-section">
+        <div class="container">
+            {{ $articles->onEachSide(1)->links('vendor.pagination.pagination') }}
+        </div>
+    </section>
 @endsection
