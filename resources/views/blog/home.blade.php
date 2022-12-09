@@ -22,126 +22,19 @@
         <div class="container">
             <div class="main-content">
                 
-            <a href="#!">
-                <article class="article">
-                        <div class="article-img">
-                            <img src="/img/articles/1.png" alt="">
-                        </div>
-                        <div class="article-title">
-                            <h2>Some title</h2>
-                        </div>
-                    </article>
-                </a>
-            <a href="#!">
-                <article class="article">
-                        <div class="article-img">
-                            <img src="/img/articles/1.png" alt="">
-                        </div>
-                        <div class="article-title">
-                            <h2>Some title</h2>
-                        </div>
-                    </article>
-                </a>
-            <a href="#!">
-                <article class="article">
-                        <div class="article-img">
-                            <img src="/img/articles/1.png" alt="">
-                        </div>
-                        <div class="article-title">
-                            <h2>Some title</h2>
-                        </div>
-                    </article>
-                </a>
-            <a href="#!">
-                <article class="article">
-                        <div class="article-img">
-                            <img src="/img/articles/1.png" alt="">
-                        </div>
-                        <div class="article-title">
-                            <h2>Some title</h2>
-                        </div>
-                    </article>
-                </a>
-            <a href="#!">
-                <article class="article">
-                        <div class="article-img">
-                            <img src="/img/articles/1.png" alt="">
-                        </div>
-                        <div class="article-title">
-                            <h2>Some title</h2>
-                        </div>
-                    </article>
-                </a>
-            <a href="#!">
-                <article class="article">
-                        <div class="article-img">
-                            <img src="/img/articles/1.png" alt="">
-                        </div>
-                        <div class="article-title">
-                            <h2>Some title</h2>
-                        </div>
-                    </article>
-                </a>
-            <a href="#!">
-                <article class="article">
-                        <div class="article-img">
-                            <img src="/img/articles/1.png" alt="">
-                        </div>
-                        <div class="article-title">
-                            <h2>Some title</h2>
-                        </div>
-                    </article>
-                </a>
-            <a href="#!">
-                <article class="article">
-                        <div class="article-img">
-                            <img src="/img/articles/1.png" alt="">
-                        </div>
-                        <div class="article-title">
-                            <h2>Some title</h2>
-                        </div>
-                    </article>
-                </a>
-            <a href="#!">
-                <article class="article">
-                        <div class="article-img">
-                            <img src="/img/articles/1.png" alt="">
-                        </div>
-                        <div class="article-title">
-                            <h2>Some title</h2>
-                        </div>
-                    </article>
-                </a>
-            <a href="#!">
-                <article class="article">
-                    <div class="article-img">
-                        <img src="/img/articles/1.png" alt="">
-                    </div>
-                    <div class="article-title">
-                        <h2>Some title</h2>
-                    </div>
-                </article>
-            </a>
-            <a href="#!">
-                <article class="article">
-                    <div class="article-img">
-                        <img src="/img/articles/1.png" alt="">
-                    </div>
-                    <div class="article-title">
-                        <h2>Some title</h2>
-                    </div>
-                </article>
-            </a>
-        <a href="#!">
-            <article class="article">
-                <div class="article-img">
-                    <img src="/img/articles/1.png" alt="">
-                </div>
-                <div class="article-title">
-                    <h2>Some title</h2>
-                </div>
-            </article>
-            </a>
+                @foreach ($articles as $article)
+                    <a href="#!">
+                        <article class="article">
+                            <div class="article-img">
+                                <img src="{{ $article->image }}" alt="">
+                            </div>
+                            <div class="article-title">
+                                <h2>{{ $article->title }}</h2>
+                            </div>
+                        </article>
+                    </a>                    
+                @endforeach
+
             </div>
         </div>
     </main>
