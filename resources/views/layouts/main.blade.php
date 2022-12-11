@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="/css/media/home.css">
     <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="/css/pagination.css">
+    <link rel="stylesheet" href="/css/article/show.css">
     <title>Personal-blog</title>
 </head>
 <body>
