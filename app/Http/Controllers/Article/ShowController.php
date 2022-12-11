@@ -11,7 +11,7 @@ class ShowController extends Controller
     
     public function __invoke(Article $article)
     {
-        return view('article.show');
+        return view('article.show', compact('article'));
     }
 
 }
