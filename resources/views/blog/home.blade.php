@@ -23,7 +23,7 @@
             <div class="main-content">
                 
                 @foreach ($articles as $article)
-                    <a href="#!">
+                    <a href="{{ route('articles.show', $article) }}">
                         <article class="article">
                             <div class="article-img">
                                 <img src="{{ $article->image }}" alt="">
