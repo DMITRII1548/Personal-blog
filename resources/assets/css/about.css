@@ -1,0 +1,30 @@
+.section-about {
+    background: #ADCCCF;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    margin-top: 50px;
+    margin-bottom: 70px;
+}
+
+.section-about-line {
+    width: 100%;
+    height: 2px;
+    background: #789992;
+}
+
+.about-content > div > h1 {
+    max-width: 500px;
+    font-size: 28px;
+    color: #2E5D63;
+}
+
+.about-content > div > p {
+    margin-top: 10px;
+    max-width: 720px;
+    font-size: 20px;
+    color: #2E5D63;
+}
