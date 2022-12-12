@@ -26,7 +26,7 @@
                     <a href="{{ route('articles.show', $article) }}">
                         <article class="article">
                             <div class="article-img">
-                                <img src="{{ $article->image }}" alt="">
+                                <img src="{{ asset($article->image) }}" alt="">
                             </div>
                             <div class="article-title">
                                 <h2>{{ $article->title }}</h2>
