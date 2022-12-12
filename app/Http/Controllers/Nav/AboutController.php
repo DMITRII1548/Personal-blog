@@ -10,7 +10,7 @@ class AboutController extends Controller
     
     public function __invoke()
     {
-        //code
+        return view('blog.about');
     }
  
 }
