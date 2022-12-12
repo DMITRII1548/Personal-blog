@@ -4,11 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/home.css">
-    <link rel="stylesheet" href="/css/media/home.css">
-    <link rel="stylesheet" href="/css/reset.css">
-    <link rel="stylesheet" href="/css/pagination.css">
-    <link rel="stylesheet" href="/css/article/show.css">
+
+    @vite(['resources/js/app.js'])
+
     <title>Personal-blog</title>
 </head>
 <body>
@@ -25,7 +23,7 @@
                         <li><a href="{{ route('nav.about') }}" class="header-nav-link">About</a></li>
                         <li><a href="{{ route('nav.getintouch') }}" class="header-nav-link">Get in touch</a></li>
                     </ul>
-                    <img src="/img/layout/header/nav-open.svg" alt="" class="header-nav-menu">
+                    <img src="{{ asset('/img/layout/header/nav-open.svg') }}" alt="" class="header-nav-menu">
                 </nav>
             </div>
         </div>
@@ -38,7 +36,7 @@
             <div class="footer-content">
                 <div class="footer-contacts">
                     <div class="phone">
-                        <img src="/img/layout/footer/phone.png" alt="">
+                        <img src="{{ asset('/img/layout/footer/phone.png') }}" alt="">
                         <span>+7-777-777-77-77</span>
                     </div>
                     <div class="email">
@@ -57,7 +55,7 @@
             </div>
         </div>
     </footer>
+    <script src="{{ resource_path ("assets/js/home.js") }}"></script>
 
-    <script src="/js/home.js"></script>
 </body>
 </html>
