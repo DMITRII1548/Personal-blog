@@ -1,0 +1,36 @@
+.section-get-in-touch {
+    background: #ADCCCF;
+
+    min-height: 100px;
+}
+
+.get-in-touch-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 35px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.get-in-touch-info {
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+}
+
+.get-in-touch-img > img{
+    width: 65px;
+}
+
+.get-in-touch-text > a {
+    font-size: 24px;    
+    color: #2E5D63;
+    text-decoration: underline;
+}
+
+.get-in-touch-line {
+    height: 2px;
+    background-color: #789992;
+    width: 100%;
+}
