@@ -6,5 +6,6 @@ import '../assets/css/reset.css'
 import '../assets/css/pagination.css'
 import '../assets/css/article/show.css'
 import '../assets/css/about.css'
+import '../assets/css/get_in_touch.css'
 
 import '../assets/js/home'
