@@ -36,7 +36,7 @@
             <div class="footer-content">
                 <div class="footer-contacts">
                     <div class="phone">
-                        <img src="{{ asset('/img/layout/footer/phone.png') }}" alt="">
+                        <img src="{{ asset('/img/layout/socials/phone.png') }}" alt="">
                         <span>+7-777-777-77-77</span>
                     </div>
                     <div class="email">
@@ -45,11 +45,11 @@
                 </div>
                 <div class="footer-socials">
                     <ul class="footer-social-list">
-                        <li><a href="#!" class="footer-social-link"><img src="/img/layout/footer/socials/twitter.png" alt=""></a></li>
-                        <li><a href="#!" class="footer-social-link"><img src="/img/layout/footer/socials/github.png" alt=""></a></li>
-                        <li><a href="#!" class="footer-social-link"><img src="/img/layout/footer/socials/instagram.png" alt=""></a></li>
-                        <li><a href="#!" class="footer-social-link"><img src="/img/layout/footer/socials/youtube.png" alt=""></a></li>
-                        <li><a href="#!" class="footer-social-link"><img src="/img/layout/footer/socials/telegram.png" alt=""></a></li>
+                        <li><a href="#!" class="footer-social-link"><img src="{{ asset('/img/layout/socials/twitter.png') }}" alt=""></a></li>
+                        <li><a href="https://github.com/DMITRII1548" target="_blank" class="footer-social-link"><img src="{{ asset('/img/layout/socials/github.png') }}" alt=""></a></li>
+                        <li><a href="#!" class="footer-social-link"><img src="{{ asset('/img/layout/socials/instagram.png') }}" alt=""></a></li>
+                        <li><a href="#!" class="footer-social-link"><img src="{{ asset('/img/layout/socials/youtube.png') }}" alt=""></a></li>
+                        <li><a href="#!" class="footer-social-link"><img src="{{ asset('/img/layout/socials/telegram.png') }}" alt=""></a></li>
                     </ul>
                 </div>
             </div>

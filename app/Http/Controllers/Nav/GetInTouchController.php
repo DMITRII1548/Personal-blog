@@ -10,7 +10,7 @@ class GetInTouchController extends Controller
     
     public function __invoke()
     {
-        //code
+        return view('blog.get_in_touch');
     }
  
 }
