@@ -64,6 +64,14 @@ address {
 
 /* Form */
 
+textarea:focus, input:focus{
+    outline: 0;
+}
+
+*:focus {
+    outline: 0;
+}
+
 input, textarea, button, select {
 	font-family: inherit;
     font-size: inherit;

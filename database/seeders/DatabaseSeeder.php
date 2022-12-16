@@ -5,7 +5,9 @@ namespace Database\Seeders;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
 use App\Models\Article;
+use App\Models\ArticleComment;
 use App\Models\News;
+use App\Models\NewsComment;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -26,5 +28,8 @@ class DatabaseSeeder extends Seeder
 
         Article::factory(20)->create();
         News::factory(30)->create();
+
+        ArticleComment::factory(100)->create();
+        NewsComment::factory(120)->create();
     }
 }
