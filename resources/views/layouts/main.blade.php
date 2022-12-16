@@ -22,6 +22,10 @@
                         <li><a href="{{ route('nav.news') }}" class="header-nav-link">News</a></li>
                         <li><a href="{{ route('nav.about') }}" class="header-nav-link">About</a></li>
                         <li><a href="{{ route('nav.getintouch') }}" class="header-nav-link">Get in touch</a></li>
+                        <li class="header-sign">
+                            <a href="#!" class="header-nav-link">Sign in</a>
+                            <a href="#!" class="header-nav-link">Sign up</a>
+                        </li>
                     </ul>
                     <img src="{{ asset('/img/layout/header/nav-open.svg') }}" alt="" class="header-nav-menu">
                 </nav>
