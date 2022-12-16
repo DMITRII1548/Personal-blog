@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 // Navigation
+
 Route::group(['namespace' => 'App\Http\Controllers\Nav'], function () {
     Route::get('/', 'HomeController')->name('nav.home');
     Route::get('/news', 'NewsController')->name('nav.news');
@@ -26,6 +27,12 @@ Route::group(['namespace' => 'App\Http\Controllers\Nav'], function () {
 
 Route::group(['namespace' => 'App\Http\Controllers\Article'], function () {
     Route::get('/articles/{article}', 'ShowController')->name('articles.show');
+});
+
+// News CRUD
+
+Route::group(['namespace' => 'App\Http\Controllers\News'], function () {
+    Route::get('/news/{news}', 'ShowController')->name('news.show');
 });
 
 

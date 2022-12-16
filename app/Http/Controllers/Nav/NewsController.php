@@ -11,9 +11,9 @@ class NewsController extends Controller
 
     public function __invoke()
     {
-        $articles = News::paginate();
+        $news = News::paginate();
 
-        return view('blog.news', compact('articles'));
+        return view('blog.news', compact('news'));
     }
 
 }
