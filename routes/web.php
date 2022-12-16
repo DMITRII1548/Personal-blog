@@ -36,3 +36,14 @@ Route::group(['namespace' => 'App\Http\Controllers\News'], function () {
 });
 
 
+// Comment
+
+Route::group(['namespace' => 'App\Http\Controllers\Comment'], function () {
+    Route::group(['namespace' => 'Article'], function () {
+        Route::post('/articles/{article}/comments', 'StoreController')->name('articles.comments.store');
+    });
+    Route::group(['namespace' => 'News'], function () {
+        Route::post('/news/{news}/comments', 'StoreController')->name('news.comments.store');
+    });
+});
+

@@ -19,7 +19,7 @@
         <div class="container">
             <div class="comments-line"></div>
             <div class="comment-send">
-                <form action="#!" method="POST" class="comment-sent-form">
+                <form action="{{ route('articles.comments.store', $article) }}" method="POST" class="comment-sent-form">
                     @csrf
                     @method('post')
                     <textarea type="text" class="comment-input" name="comment" placeholder="Comment" required maxlength="1000"></textarea>
