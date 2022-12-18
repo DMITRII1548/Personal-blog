@@ -47,3 +47,17 @@ Route::group(['namespace' => 'App\Http\Controllers\Comment'], function () {
     });
 });
 
+// Register
+
+Route::group(['namespace' => 'App\Http\Controllers\Register'], function () {
+    Route::get('/register/create', 'CreateController')->name('auth.register')->middleware('unauth');
+    Route::post('/register', 'StoreController')->name('auth.register.store')->middleware('unauth');
+});
+
+Route::group(['namespace' => 'App\Http\Controllers\Auth'], function () {
+
+    Route::get('/logout', 'LogoutController')->name('auth.logout')->middleware('auth');
+    Route::get('/login/create', 'CreateController')->name('auth.create')->middleware('unauth');
+    Route::post('/auth/login', 'LoginController')->name('auth.login')->middleware('unauth');
+
+});
