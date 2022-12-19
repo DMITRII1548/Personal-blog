@@ -32,7 +32,7 @@
                 @foreach ($comments as $comment)
                     <div class="comment">
                         <h3 class="comment-user-name">
-                            User name
+                            {{ $comment->users->name }}
                         </h3>
                         <p class="comment-text">
                             {{ $comment->text }}

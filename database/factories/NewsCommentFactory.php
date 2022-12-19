@@ -19,6 +19,7 @@ class NewsCommentFactory extends Factory
         return [
             'text' => $this->faker->text(),
             'news_id' => random_int(1, 30),
+            'user_id' => random_int(1, 10),
         ];
     }
 }
