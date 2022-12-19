@@ -21,6 +21,7 @@ class StoreController extends Controller
         NewsComment::create([
             'text' => $comment,
             'news_id' => $news->id,
+            'user_id' => auth()->user()->id,
         ]);
 
         return redirect()->route('news.show', compact('news'));
