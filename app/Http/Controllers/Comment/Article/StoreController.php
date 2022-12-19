@@ -20,6 +20,7 @@ class StoreController extends Controller
         ArticleComment::create([
             'text' => $comment,
             'article_id' => $article->id,
+            'user_id' => auth()->user()->id,
         ]);
 
         return redirect()->route('articles.show', compact('article'));
