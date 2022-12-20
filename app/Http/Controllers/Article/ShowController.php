@@ -15,7 +15,9 @@ class ShowController extends Controller
     {
         $comments = ArticleComment::where('article_id', $article->id)->get();
 
-        return view('article.show', compact('article', 'comments'));
+        $urlPreviousPage = url()->current() == url()->previous() ? route('nav.news') : url()->previous();
+
+        return view('article.show', compact('article', 'comments', 'urlPreviousPage'));
     }
 
 }

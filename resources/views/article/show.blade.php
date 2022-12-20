@@ -4,7 +4,7 @@
 
     <article class="article-show">
         <div class="container">
-            <a href="{{ url()->previous() }}" class="link-back">Back</a>
+            <a href="{{ $urlPreviousPage }}" class="link-back">Back</a>
             <div class="article-content">
                 <h2 class="article-content-title">{{ $article->title }}</h2>
                 <img src="{{ asset($article->image) }}" alt="" class="article-content-img">
