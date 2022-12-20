@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\News;
 
+use App\Actions\UrlBackAction;
 use App\Http\Controllers\Controller;
 use App\Models\News;
 use App\Models\NewsComment;
@@ -14,7 +15,10 @@ class ShowController extends Controller
     {
         $comments = NewsComment::where('news_id', $news->id)->get();
 
-        return view('news.show', compact('news', 'comments'));
+        $urlBackAction = new UrlBackAction();
+        $urlPreviousPage = $urlBackAction->execute(route('nav.news'));
+
+        return view('news.show', compact('news', 'comments', 'urlPreviousPage'));
     }
 
 }
