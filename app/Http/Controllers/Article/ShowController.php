@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Article;
 
+use App\Actions\UrlBackAction;
 use App\Http\Controllers\Controller;
 use App\Models\Article;
 use App\Models\ArticleComment;
@@ -15,7 +16,8 @@ class ShowController extends Controller
     {
         $comments = ArticleComment::where('article_id', $article->id)->get();
 
-        $urlPreviousPage = url()->current() == url()->previous() ? route('nav.news') : url()->previous();
+        $urlBackAction = new UrlBackAction();
+        $urlPreviousPage = $urlBackAction->execute(route('nav.home'));
 
         return view('article.show', compact('article', 'comments', 'urlPreviousPage'));
     }
