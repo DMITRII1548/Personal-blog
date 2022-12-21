@@ -25,6 +25,9 @@
                         <li class="header-sign">
                             @if (isset(auth()->user()->name))
                                 <a href="{{ route('auth.logout') }}" class="header-nav-link">Logout</a>
+                                @if (auth()->user()->status == 'admin')
+                                    <a href="{{ route('articles.create') }}" class="header-nav-link">AdminPanel</a>
+                                @endif
                             @else
                                 <a href="{{ route('auth.create') }}" class="header-nav-link">Sign in</a>
                                 <a href="{{ route('auth.register') }}" class="header-nav-link">Sign up</a>

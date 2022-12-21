@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
+* {
+    background: #639886;
+}
+
 body {
     display: flex;
     flex-direction: column;
