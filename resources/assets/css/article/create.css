@@ -38,6 +38,10 @@
     font-size: 18px;
 }
 
+.create-article-input-img {
+    max-width: 300px
+}
+
 .create-article-textarea {
     border: #3F5057 solid 2px;
     border-radius: 25px;
@@ -60,3 +64,4 @@
 .create-article-button:hover {
     opacity: 0.75;
 }
+

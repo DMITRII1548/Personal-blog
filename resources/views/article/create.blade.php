@@ -11,7 +11,7 @@
             @csrf
             <label for="image">
                 Image:
-            <input type="file" id="image" class="create-article-input" required name="image" maxlength="120"></label>
+            <input type="file" id="image" class="create-article-input create-article-input-img" required name="image" maxlength="120"></label>
 
             <label for="title">
                 Title:
