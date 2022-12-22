@@ -29,8 +29,9 @@ Route::group(['namespace' => 'App\Http\Controllers\Nav'], function () {
 Route::group(['namespace' => 'App\Http\Controllers\Article'], function () {
 
     Route::group(['middleware' => 'admin'], function () {
-        Route::get('/articles/create', 'CreateController')->name('articles.create');
         Route::post('/articles', 'StoreController')->name('articles.store');
+
+        Route::get('/articles/create', 'CreateController')->name('articles.create');
     });
 
     Route::get('/articles/{article}', 'ShowController')->name('articles.show');
