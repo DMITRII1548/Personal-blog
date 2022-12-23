@@ -1,5 +1,6 @@
 <?php
 
+use GuzzleHttp\Middleware;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,13 +21,24 @@ Route::group(['namespace' => 'App\Http\Controllers\Nav'], function () {
     Route::get('/news', 'NewsController')->name('nav.news');
     Route::get('/about', 'AboutController')->name('nav.about');
     Route::get('/getintouch', 'GetInTouchController')->name('nav.getintouch');
+    Route::get('/adminpanel', 'AdminPanelController')->name('nav.adminpanel');
 });
 
 
 // Articles CRUD
 
 Route::group(['namespace' => 'App\Http\Controllers\Article'], function () {
+
+    Route::group(['middleware' => 'admin'], function () {
+        Route::delete('articles/{article}', 'DestroyController')->name('articles.destroy');
+        Route::post('/articles', 'StoreController')->name('articles.store');
+
+        Route::get('/articles/create', 'CreateController')->name('articles.create');
+    });
+
     Route::get('/articles/{article}', 'ShowController')->name('articles.show');
+
+
 });
 
 // News CRUD
@@ -54,12 +66,10 @@ Route::group(['namespace' => 'App\Http\Controllers\Register'], function () {
     Route::post('/register', 'StoreController')->name('auth.register.store')->middleware('unauth');
 });
 
-//Auth
+// Auth
 
 Route::group(['namespace' => 'App\Http\Controllers\Auth'], function () {
-
     Route::get('/logout', 'LogoutController')->name('auth.logout')->middleware('auth');
     Route::get('/login/create', 'CreateController')->name('auth.create')->middleware('unauth');
     Route::post('/auth/login', 'LoginController')->name('auth.login')->middleware('unauth');
-
 });

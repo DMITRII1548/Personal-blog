@@ -108,3 +108,9 @@ label {
 legend {
 	display: block;
 }
+
+/* reset background */
+
+body, footer, aside, .container, div, section, img, h1, h2, h3, h4, h5, span, b, i, p, input, textarea, button, form, nav, ul, li, label, a {
+    background: none;
+}
