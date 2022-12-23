@@ -9,5 +9,6 @@ import '../assets/css/article/create.css'
 import '../assets/css/about.css'
 import '../assets/css/get_in_touch.css'
 import '../assets/css/register.css'
+import '../assets/css/admin_panel.css'
 
 import '../assets/js/home'

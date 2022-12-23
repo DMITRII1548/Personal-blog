@@ -21,6 +21,7 @@ Route::group(['namespace' => 'App\Http\Controllers\Nav'], function () {
     Route::get('/news', 'NewsController')->name('nav.news');
     Route::get('/about', 'AboutController')->name('nav.about');
     Route::get('/getintouch', 'GetInTouchController')->name('nav.getintouch');
+    Route::get('/adminpanel', 'AdminPanelController')->name('nav.adminpanel');
 });
 
 
