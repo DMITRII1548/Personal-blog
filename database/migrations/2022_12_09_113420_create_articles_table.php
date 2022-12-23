@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('text');
             $table->string('image', 1000);
 
+            $table->softDeletes();
             $table->timestamps();
         });
     }

@@ -30,6 +30,7 @@ Route::group(['namespace' => 'App\Http\Controllers\Nav'], function () {
 Route::group(['namespace' => 'App\Http\Controllers\Article'], function () {
 
     Route::group(['middleware' => 'admin'], function () {
+        Route::delete('articles/{article}', 'DestroyController')->name('articles.destroy');
         Route::post('/articles', 'StoreController')->name('articles.store');
 
         Route::get('/articles/create', 'CreateController')->name('articles.create');

@@ -8,7 +8,6 @@
                     <ul class="admin-nav-list">
                         <li><h1 class="admin-nav-title">Article</h1></li>
                         <li><a href="{{ route('articles.create') }}" class="admin-nav-link">Create article</a></li>
-                        <li><a href="#!" class="admin-nav-link">Change article</a></li>
                     </ul>
                 </nav>
                 <div class="admin-line"></div>
@@ -16,7 +15,6 @@
                     <ul class="admin-nav-list">
                         <li><h1 class="admin-nav-title">News</h1></li>
                         <li><a href="#!" class="admin-nav-link">Create news</a></li>
-                        <li><a href="#!" class="admin-nav-link">Change news</a></li>
                     </ul>
                 </nav>
             </div>

@@ -29,6 +29,14 @@
     color: #3F5057;
 }
 
+.article-show-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 3l5px;
+}
+
 .link-back {
     border: #3F5057 solid 2px;
     border-radius: 50px;
@@ -39,6 +47,25 @@
 }
 
 .link-back:hover {
+    opacity: 0.75;
+}
+
+.admin-buttons {
+    display: flex;
+    gap: 30px;
+    justify-content: flex-end;
+}
+
+.admin-button {
+    border: #3F5057 solid 2px;
+    border-radius: 50px;
+    padding: 10px 20px;
+    color: #3F5057;
+
+    font-size: 24px;
+}
+
+.admin-button:hover {
     opacity: 0.75;
 }
 
