@@ -56,7 +56,7 @@
                         </p>
                     </div>
                 @endforeach
-
+                {{ $comments->onEachSide(1)->links('vendor.pagination.pagination') }}
             </div>
         </div>
     </section>

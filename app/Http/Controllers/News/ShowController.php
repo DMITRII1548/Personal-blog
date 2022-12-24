@@ -13,7 +13,7 @@ class ShowController extends Controller
 
     public function __invoke(News $news)
     {
-        $comments = NewsComment::where('news_id', $news->id)->get();
+        $comments = NewsComment::where('news_id', $news->id)->latest()->paginate(5);
 
         $urlBackAction = new UrlBackAction();
         $urlPreviousPage = $urlBackAction->execute(route('nav.news'));

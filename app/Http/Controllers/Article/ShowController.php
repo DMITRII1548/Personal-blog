@@ -14,7 +14,7 @@ class ShowController extends Controller
 
     public function __invoke(Article $article)
     {
-        $comments = ArticleComment::where('article_id', $article->id)->get();
+        $comments = ArticleComment::where('article_id', $article->id)->latest()->paginate(5);
 
         $urlBackAction = new UrlBackAction();
         $urlPreviousPage = $urlBackAction->execute(route('nav.home'));
