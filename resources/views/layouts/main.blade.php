@@ -25,6 +25,9 @@
                         <li class="header-sign">
                             @if (isset(auth()->user()->name))
                                 <a href="{{ route('auth.logout') }}" class="header-nav-link">Logout</a>
+                                @if (auth()->user()->status == 'admin')
+                                    <a href="{{ route('nav.adminpanel') }}" class="header-nav-link">AdminPanel</a>
+                                @endif
                             @else
                                 <a href="{{ route('auth.create') }}" class="header-nav-link">Sign in</a>
                                 <a href="{{ route('auth.register') }}" class="header-nav-link">Sign up</a>
@@ -46,7 +49,7 @@
                 <div class="footer-contacts">
                     <div class="phone">
                         <img src="{{ asset('/img/layout/socials/phone.png') }}" alt="">
-                        <span>+7-777-777-77-77</span>
+                        <span>+0-000-000-00-00</span>
                     </div>
                     <div class="email">
                         <span>example@exaple.example</span>

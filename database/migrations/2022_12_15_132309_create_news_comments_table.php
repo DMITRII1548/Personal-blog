@@ -19,6 +19,7 @@ return new class extends Migration
             $table->foreignId('news_id')->constrained('news');
             $table->foreignId('user_id')->constrained('users');
 
+            $table->softDeletes();
             $table->timestamps();
         });
     }
