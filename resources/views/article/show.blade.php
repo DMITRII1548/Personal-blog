@@ -12,7 +12,7 @@
                 @if (!auth()->user())
                 @elseif (auth()->user()->status == 'admin')
                     <div class="admin-buttons">
-                        <a href="#!" class="admin-button">Change</a>
+                        <a href="{{ route('articles.edit', $article) }}" class="admin-button">Change</a>
                         <form action="{{ route('articles.destroy', $article) }}" method="post">
                             @csrf
                             @method('delete')

@@ -30,6 +30,8 @@ Route::group(['namespace' => 'App\Http\Controllers\Nav'], function () {
 Route::group(['namespace' => 'App\Http\Controllers\Article'], function () {
 
     Route::group(['middleware' => 'admin'], function () {
+        Route::patch('articles/{article}', 'UpdateController')->name('articles.update');
+        Route::get('articles/{article}/edit', 'EditController')->name('articles.edit');
         Route::delete('articles/{article}', 'DestroyController')->name('articles.destroy');
         Route::post('/articles', 'StoreController')->name('articles.store');
 
