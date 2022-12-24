@@ -5,7 +5,7 @@
 <section class="create-article-section">
     <div class="container">
         <h1 class="create-article-title">
-            Create-article
+            Change-article
         </h1>
         <form action="{{ route('articles.update', $article) }}" method="post" class="create-article-form" enctype="multipart/form-data">
             @csrf

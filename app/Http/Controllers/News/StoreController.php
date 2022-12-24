@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Controllers\Article;
+namespace App\Http\Controllers\News;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\EntryRequest;
-use App\Models\Article;
+use App\Models\News;
 use Exception;
 use Illuminate\Http\Request;
 
@@ -20,14 +20,15 @@ class StoreController extends Controller
 
             $request->image->storeAs('images', $imageName);
 
-            $article = Article::create([
+            $news = News::create([
                 'title' => $request->title,
                 'text' => $request->text,
                 'image' => 'storage/app/images/' . $imageName,
             ]);
 
-            return redirect()->route('articles.show', $article);
+            return redirect()->route('news.show', $news);
         } catch (Exception $e) {
+            dd($e);
             return redirect()->route('news.create');
         }
     }

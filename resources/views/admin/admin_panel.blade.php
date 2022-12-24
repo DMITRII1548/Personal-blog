@@ -14,7 +14,7 @@
                 <nav class="admin-nav">
                     <ul class="admin-nav-list">
                         <li><h1 class="admin-nav-title">News</h1></li>
-                        <li><a href="#!" class="admin-nav-link">Create news</a></li>
+                        <li><a href="{{ route('news.create') }}" class="admin-nav-link">Create news</a></li>
                     </ul>
                 </nav>
             </div>
