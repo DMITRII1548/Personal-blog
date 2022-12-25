@@ -3,7 +3,7 @@
 @section('content')
     <main class="main-form-register">
         <div class="container">
-            <form action="{{ route('auth.register.store') }}" method="POST" class="form-register">
+            <form action="{{ route('auth.register.confirm') }}" method="POST" class="form-register">
                 @csrf
                 @method('post')
                 <label for="name">name:
