@@ -18,6 +18,10 @@ class StoreController extends Controller
         try {
             $data = $request->validated();
 
+            if (!Hash::check($data['code'], $data['hashed_code'])) {
+                return redirect()->route('auth.register');
+            }
+
             $user = User::create([
                 'name' => $data['name'],
                 'email' => $data['email'],
@@ -28,7 +32,7 @@ class StoreController extends Controller
 
             return redirect()->route('nav.home');
         } catch (Exception $e) {
-            return redirect()->route('nav.home');
+            return redirect()->route('auth.register');
         }
     }
 

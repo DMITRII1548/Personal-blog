@@ -72,6 +72,7 @@ Route::group(['namespace' => 'App\Http\Controllers\Comment', 'middleware' => 'au
 // Register
 
 Route::group(['namespace' => 'App\Http\Controllers\Register'], function () {
+    Route::post('/register/confirm', 'SendConfirmEmailController')->name('auth.register.confirm')->middleware('unauth');
     Route::get('/register/create', 'CreateController')->name('auth.register')->middleware('unauth');
     Route::post('/register', 'StoreController')->name('auth.register.store')->middleware('unauth');
 });
