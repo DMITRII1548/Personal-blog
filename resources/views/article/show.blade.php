@@ -26,7 +26,7 @@
                 <h2 class="article-content-title">{{ $article->title }}</h2>
                 <img src="{{ asset($article->image) }}" alt="" class="article-content-img">
                 <span class="article-content-text">
-                    {{ $article->text }}
+                    {!! nl2br($article->text) !!}
                 </span>
             </div>
         </div>
@@ -52,7 +52,7 @@
                             {{ $comment->users->name }}
                         </h3>
                         <p class="comment-text">
-                            {{ $comment->text }}
+                            {!! nl2br($comment->text) !!}
                         </p>
                     </div>
                 @endforeach

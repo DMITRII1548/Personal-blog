@@ -136,7 +136,7 @@
     .footer-social-list {
         justify-content: center;
         column-gap: 35px;
-        row-gap: 35x;
+        row-gap: 45x;
         flex-wrap: wrap;
     }
 }
