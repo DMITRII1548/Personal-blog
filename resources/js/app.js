@@ -11,4 +11,4 @@ import '../assets/css/get_in_touch.css'
 import '../assets/css/register.css'
 import '../assets/css/admin_panel.css'
 
-import '../assets/js/home'
+import '../assets/js/menu'
