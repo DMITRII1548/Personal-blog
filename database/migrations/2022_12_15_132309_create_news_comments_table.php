@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('news_comments', function (Blueprint $table) {
             $table->id();
-            $table->string('text', 1000);
+            $table->longText('text', 1000);
             $table->foreignId('news_id')->constrained('news');
             $table->foreignId('user_id')->constrained('users');
 

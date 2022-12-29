@@ -34,6 +34,7 @@
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
+    gap: 30px;
     row-gap: 3l5px;
 }
 
@@ -52,7 +53,8 @@
 
 .admin-buttons {
     display: flex;
-    gap: 30px;
+    column-gap: 30px;
+    row-gap: 60px;
     justify-content: flex-end;
 }
 
