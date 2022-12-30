@@ -12,3 +12,4 @@ import '../assets/css/register.css'
 import '../assets/css/admin_panel.css'
 
 import '../assets/js/menu'
+import '../assets/js/aos'
