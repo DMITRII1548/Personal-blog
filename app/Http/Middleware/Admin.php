@@ -16,8 +16,10 @@ class Admin
      */
     public function handle(Request $request, Closure $next)
     {
-        if (auth()->user()->status !== 'admin') {
-            return url()->previous();
+        if (is_null(auth()->user())) {
+            return redirect(url()->previous());
+        } else if (auth()->user()->status !== 'admin') {
+            return redirect(url()->previous());
         }
         return $next($request);
     }

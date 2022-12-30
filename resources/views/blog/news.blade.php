@@ -6,7 +6,7 @@
         <div class="main-content">
 
             @foreach ($news as $item)
-                <a href="{{ route('news.show', $item) }}">
+                <a href="{{ route('news.show', $item) }}"  data-aos="fade-up">
                     <article class="article">
                         <div class="article-img">
                             <img src="{{ asset($item->image) }}" alt="">
